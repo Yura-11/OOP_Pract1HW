@@ -1,8 +1,9 @@
 package clients;
 
+
 import java.time.LocalDate;
 
-public class Sparrow extends Animal{
+public class Sparrow extends Animal implements Flyable, Goable{
     public Sparrow(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
         super(nickName, owner, birthDate, illness);
     }
@@ -13,9 +14,22 @@ public class Sparrow extends Animal{
 
 
     @Override
-    public void swim(int meters){
-        System.out.println("Животное по имени " + nickName + " не умеет плавать");
+    public void fly() {
+        System.out.println("Животное " + nickName + "Полетело");
 
     }
+    @Override
+    public double getFlySpeed() {
+        return Flyable.super.getFlySpeed();
+    }
 
+    @Override
+    public void go() {
+        System.out.println("Животное " + nickName + " пошло куда то");
+
+    }
+    @Override
+    public double getRunSpeed() {
+        return Goable.super.getRunSpeed();
+    }
 }

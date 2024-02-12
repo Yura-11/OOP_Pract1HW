@@ -11,8 +11,6 @@ public class Animal {
     protected Illness illness;
 
 
-
-
     // Это пустой конструктор (по умолчанию)
     public Animal(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
         this.nickName = nickName;
@@ -78,22 +76,32 @@ public class Animal {
     }
 
 
-    public void toGo(int meters) {
-        System.out.println("Животное " + nickName + " прошло " + meters + " метров.");
 
-    };
 
-    public void fly(int meters){
+
+    public void fly(int meters) {
         System.out.println("Животное " + nickName + " пролетело " + meters + " метров.");
     }
 
-    public void swim(int meters){
-        System.out.println("Животное " + nickName + " проплыло " + meters + " метров.");
+    public void swim() {
+        System.out.println("Животное " + nickName + " проплыло " +  " метров.");
 
     }
 
+    public void go() {
+        System.out.println("Животное " + nickName + " пролетело " +  " метров.");
+    }
+//    public void toGo(int meters) {
+//        System.out.println("Животное " + nickName + " прошло " + meters + " метров.");
+//    }
     @Override
     public String toString() {
         return String.format("nickName = %s, bd = %s, owner = %s, illness = %s", nickName, birthDate, owner, illness);
     }
+
+
+    public String getName() {
+        return nickName;
+    }
 }
+
