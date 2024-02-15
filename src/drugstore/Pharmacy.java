@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Pharmacy implements Iterator<Component> {
-    private List<Component> components = new ArrayList<>();
+    List<Component> components = new ArrayList<>();
     private int index = 0;
 
     public void addComponents(Component... components) {
@@ -24,8 +24,6 @@ public class Pharmacy implements Iterator<Component> {
         return components.get(index++);
     }
 
-    public int compareTo(Pharmacy otherPharmacy) {
-    return index - otherPharmacy.index;
-    }
+
 }
 

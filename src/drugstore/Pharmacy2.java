@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Pharmacy2 implements Iterable<Component> {
+public class Pharmacy2 implements Iterable<Component>, Copmparable, Comparable<Pharmacy2> {
     private List<Component> components = new ArrayList<>();
     private int index = 0;
 
-    public void addComponents(Component ... components) {
-        for(Component c : components){
+    public void addComponents(Component... components) {
+        for (Component c : components) {
             this.components.add(c);
         }
     }
@@ -27,6 +27,19 @@ public class Pharmacy2 implements Iterable<Component> {
             public Component next() {
                 return components.get(index++);
             }
+
+
         };
+    }
+
+    @Override
+    public int compareTo(Pharmacy otherPharmacy) {
+
+        return 0;
+    }
+
+    @Override
+    public int compareTo(Pharmacy2 o) {
+        return 0;
     }
 }
