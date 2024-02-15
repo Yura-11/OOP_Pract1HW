@@ -4,8 +4,7 @@ import drugstore.components.Azitronite;
 import drugstore.components.Penicillin;
 import drugstore.components.Water;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Drugmain {
 
@@ -49,14 +48,6 @@ public class Drugmain {
 //            System.out.println(c);
 //        }
 
-        List<Pharmacy2> pharmacys = new ArrayList<>();
-        pharmacys.add(p3);
-        pharmacys.add(p1);
-        pharmacys.add(p2);
-        pharmacys.add(p3);
-        pharmacys.add(p5);
-
-
         List<Pharmacy2> pharmacy2s = new ArrayList<>();
         pharmacy2s.add(p4);
         pharmacy2s.add(p1);
@@ -65,11 +56,11 @@ public class Drugmain {
         pharmacy2s.add(p5);
 
         for (Pharmacy2 pharmacy : pharmacy2s) {
-            System.out.println(pharmacy);}
-
-
-
+            System.out.println(pharmacy);
         }
+
+
     }
+}
 
 
