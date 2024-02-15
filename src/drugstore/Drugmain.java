@@ -62,7 +62,7 @@ public class Drugmain {
 
         Collections.sort(pharmacy2s);
 
-        System.out.println("Pharmacy");
+        System.out.println("Sorted");
         for (Pharmacy2 pharmacy : pharmacy2s) {
             System.out.println(pharmacy);
         }
