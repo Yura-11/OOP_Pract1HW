@@ -4,19 +4,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Pharmacy implements Iterator<Component>{
-
-  public List<Component> components = new ArrayList<Component>();
-
+public class Pharmacy implements Iterator<Component> {
+    private List<Component> components = new ArrayList<>();
     private int index = 0;
 
-
-
-
-    public void addComponents(Component ... components) {
-       for (Component c : components){
-          this.components.add(c);
-       }
+    public void addComponents(Component... components) {
+        for (Component c : components) {
+            this.components.add(c);
+        }
     }
 
     @Override
@@ -29,9 +24,8 @@ public class Pharmacy implements Iterator<Component>{
         return components.get(index++);
     }
 
-//    @Override
-//    public int compareTo(Pharmacy PharmacyNew) {
-//        return 0;
-//    }
+    public int compareTo(Pharmacy otherPharmacy) {
+    return index - otherPharmacy.index;
+    }
 }
 
