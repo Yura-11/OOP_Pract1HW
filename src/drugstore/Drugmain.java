@@ -54,7 +54,7 @@ public class Drugmain {
         pharmacy2s.add(p2);
         pharmacy2s.add(p3);
         pharmacy2s.add(p5);
-1111111
+111111111111
         for (Pharmacy2 pharmacy : pharmacy2s) {
             System.out.println(pharmacy);
         }
