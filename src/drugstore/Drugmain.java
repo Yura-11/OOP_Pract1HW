@@ -60,6 +60,12 @@ public class Drugmain {
         }
 
 
+        Collections.sort(pharmacy2s);
+
+        System.out.println("Pharmacy");
+        for (Pharmacy2 pharmacy : pharmacy2s) {
+            System.out.println(pharmacy);
+        }
     }
 }
 
