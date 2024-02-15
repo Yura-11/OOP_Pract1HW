@@ -34,8 +34,6 @@ public class Drugmain {
         p5.addComponents(azitronite, penicillin, water, azitronite);
 
 
-
-
         List<Component> components = new ArrayList<>();
         components.add(water);
         components.add(azitronite);
@@ -45,7 +43,6 @@ public class Drugmain {
 
         Collections.sort(components, Comparator.reverseOrder());
         System.out.println(components);
-
 
 
 //        Iterator<Component> iterator = p1;
@@ -61,16 +58,12 @@ public class Drugmain {
         pharmacy2s.add(p3);
         pharmacy2s.add(p5);
 
-
-        System.out.println(pharmacy2s);
-
-        Collections.sort(pharmacy2s);
-        System.out.println(pharmacy2s);
-
+        for (Pharmacy2 pharmacy2 : pharmacy2s) {
+            System.out.println(pharmacy2);
 
         }
     }
-
+}
 
 
 

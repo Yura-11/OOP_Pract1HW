@@ -1,10 +1,11 @@
 package drugstore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class Pharmacy2 implements Iterable<Component>, Copmparable_pharmacy, Comparable<Pharmacy> {
+public class Pharmacy2 implements Iterable<Component>, Comparable<Pharmacy> {
 
     private List<Component> components = new ArrayList<Component>();
 
@@ -14,9 +15,7 @@ public class Pharmacy2 implements Iterable<Component>, Copmparable_pharmacy, Com
 
 
     public void addComponents(Component ... components) {
-       for (Component c : components){
-           this.components.add(c);
-       }
+        this.components.addAll(Arrays.asList(components));
     }
 
 //    @Override
@@ -44,11 +43,12 @@ public class Pharmacy2 implements Iterable<Component>, Copmparable_pharmacy, Com
         };
     }
 
-    @Override
-    public int compareTo(Pharmacy PharmacyNew) {
+@Override
+    public int compareTo(Pharmacy o) { // Анонимнй класс
         return 0;
+    }
 
         }
 
-}
+
 
