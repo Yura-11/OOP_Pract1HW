@@ -1,29 +1,24 @@
 package drugstore;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
-public class Pharmacy implements Iterator<Component> {
-    List<Component> components = new ArrayList<>();
-    private int index = 0;
+public class Pharmacy implements Comparable<Pharmacy> {
+    public List<Component> components = new ArrayList<>();
 
-    public void addComponents(Component... components) {
-        for (Component c : components) {
-            this.components.add(c);
-        }
-    }
 
     @Override
-    public boolean hasNext() {
-        return index < components.size();
+    public int compareTo(Pharmacy that) {
+        int fullPowerThat = 0;
+        int fullPowerThis = 0;
+
+        for (Component c : components) fullPowerThis += c.getPower();
+        for (Component c : that.components) fullPowerThat += c.getPower();
+
+        return Integer.compare(fullPowerThis, fullPowerThat);
     }
-
-    @Override
-    public Component next() {
-        return components.get(index++);
-    }
-
-
 }
+
+
+
 

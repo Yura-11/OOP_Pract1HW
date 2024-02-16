@@ -1,6 +1,6 @@
 package drugstore;
 
-public abstract class Component implements Comparable<Component> {
+public class Component implements Comparable<Component> {
     private String title;
     private Double weight;
     private int power;
@@ -32,5 +32,7 @@ public abstract class Component implements Comparable<Component> {
     }
 
 
-
+    public int getPower() {
+        return power;
+    }
 }
